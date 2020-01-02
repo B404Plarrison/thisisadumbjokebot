@@ -1,7 +1,7 @@
 const commando = require('discord.js-commando')
 const bot = require('discord.js')
 const client = new commando.Client({commandprefix:"jit!"})
-client.login("NjU4ODEzNTk5MTM2ODc0NTI2.XgFOHA.EOyY4bhZC9_E6ys0JpxmmljJq_o");
+client.login("NjU4ODEzNTk5MTM2ODc0NTI2.Xg1HtA.kUHF4B-jijmjoGi2tEERPpqIfRI");
 function doStuff() {
     var guild=client.guilds.get('658736334835548161')
     var role = guild.roles.get('658797801559425045')
