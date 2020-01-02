@@ -1,7 +1,23 @@
-const commando = require('discord.js-commando')
 const bot = require('discord.js')
-const client = new commando.Client({commandprefix:"jit!"})
-client.login("NjU4ODEzNTk5MTM2ODc0NTI2.Xg1HtA.kUHF4B-jijmjoGi2tEERPpqIfRI");
+const { CommandoClient } = require('discord.js-commando');
+const path = require('path');
+const client = new CommandoClient({
+	commandPrefix: '!',
+	owner: '366744306360516612',
+	invite: 'https://discord.gg/hAdgWbd',
+});
+client.registry
+    .registerDefaultTypes()
+    .registerGroups([
+		['main', 'main stuff'],
+	])
+	.registerDefaultGroups()
+	.registerDefaultCommands({
+        help: false,
+    })
+	.registerCommandsIn(path.join(__dirname, 'commands'));
+
+client.login("NjU4ODEzNTk5MTM2ODc0NTI2.Xg1POQ.god7y69IvxmQDJjHLzgwOAmjjCg");
 function doStuff() {
     var guild=client.guilds.get('658736334835548161')
     var role = guild.roles.get('658797801559425045')
